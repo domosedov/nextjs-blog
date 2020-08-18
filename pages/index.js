@@ -1,65 +1,74 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import React, {useState} from "react";
+import {useTransition, animated} from 'react-spring';
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function Home() {
+  const [todos, setTodos] = useState([]);
+  const [text, setText] = useState('');
+
+  const transitions = useTransition(todos, item => item.id, {
+    from: {transform: 'translateY(-4rem)'},
+    enter: {transform: 'translateY(0rem)'},
+    leave: {transform: 'translateY(4rem)'},
+  });
+
+  const onSubmitHandler = evt => {
+    evt.preventDefault();
+    setTodos([...todos, {id: Date.now(), title: text}]);
+    setText('');
+  }
+
+  const deleteTodo = (id) => {
+    setTodos(todos.filter(todo => todo.id !== id));
+  }
+
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
+    <div className="container mx-auto min-h-screen flex flex-col justify-between">
+      <div>
+        <Header/>
+        <div className="bg-indigo-300 py-4 px-2">
+          <form
+            onSubmit={onSubmitHandler}
           >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+            <label
+              className="text-gray-900 mr-2"
+              htmlFor="add-todo">
+              Title:
+              <input
+                id="add-todo"
+                className="border-b-2 border-indigo-600 bg-transparent"
+                type="text"
+                name="title"
+                value={text}
+                onChange={(evt) => setText(evt.target.value)}
+              />
+            </label>
+            <button
+              type="submit"
+              className="px-4 py-2 bg-indigo-600 rounded text-white"
+            >Add
+            </button>
+          </form>
+          <ul className="space-y-2">
+            {transitions.map(({item, props, key}) =>
+              <animated.li key={key} style={props} className="bg-white p-2 flex items-center justify-between">
+                <div>
+                  {item.title}
+                </div>
+                <button
+                  onClick={() => deleteTodo(item.id)}
+                  className="px-2 py-1 text-sm bg-red-700 text-white rounded">
+                  Delete
+                </button>
+              </animated.li>
+            )}
+          </ul>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+      </div>
+      <div>
+        <Footer/>
+      </div>
     </div>
   )
 }
