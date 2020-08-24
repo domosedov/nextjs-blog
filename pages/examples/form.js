@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const Form = () => {
@@ -8,10 +8,10 @@ const Form = () => {
     setUserName(evt.target.value);
   }
 
-  const handleSubmit =  async (evt) => {
+  const handleSubmit = async (evt) => {
     evt.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/api/hello', JSON.stringify({userName}), {
+      const response = await axios.post('/api/hello', JSON.stringify({ userName }), {
         headers: {
           'Content-Type': 'application/json'
         }
@@ -36,10 +36,10 @@ const Form = () => {
           onChange={handleChange}
           value={userName}
           name="username"
-          type="text"/>
-          <button
-            className="px-4 py-1 bg-green-400"
-          >Отправить</button>
+          type="text" />
+        <button
+          className="px-4 py-1 bg-green-400"
+        >Отправить</button>
       </form>
 
     </div>
