@@ -1,10 +1,17 @@
 module.exports = {
-  purge: ['./components/**/*.{js,ts,jsx,tsx}', './pages/**/*.{js,ts,jsx,tsx}'],
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
+  },
+  purge: {
+    content: [
+      "./components/**/*.{js,ts,jsx,tsx}",
+      "./pages/**/*.{js,ts,jsx,tsx}",
+    ],
+  },
   theme: {
     extend: {},
   },
-  variants: {
-    borderRadius: ['responsive', 'hover', 'focus']
-  },
+  variants: {},
   plugins: [],
-}
+};
