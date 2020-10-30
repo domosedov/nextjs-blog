@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { memo } from "react";
 import Navbar from "./Navbar";
 
 const Header = () => {
@@ -25,4 +26,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default memo(Header);

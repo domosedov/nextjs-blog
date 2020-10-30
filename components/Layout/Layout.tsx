@@ -6,10 +6,9 @@ import Main from "./Main";
 
 type Props = {
   children: ReactNode;
-  title?: string;
 };
 
-const Layout = ({ children, title = "Domosedov" }: Props) => {
+const Layout = ({ children }: Props) => {
   return (
     <>
       <Head>
@@ -91,7 +90,7 @@ const Layout = ({ children, title = "Domosedov" }: Props) => {
         <meta name="theme-color" content="#ffffff" />
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>{title}</title>
+        <title>Domosedov DEV</title>
       </Head>
       <div className="min-h-screen flex flex-col">
         <Header />
