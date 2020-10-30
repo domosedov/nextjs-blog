@@ -1,0 +1,24 @@
+import PostLayout from '@/components/Blog/PostLayout.tsx'
+
+export const meta = {
+    title: 'Setup MDX',
+    readTime: 1
+}
+
+export default ({children}) => <PostLayout meta={meta}>{children}</PostLayout>
+
+# Hello, MDX
+
+```js
+import React from 'react'
+
+const App = () => {
+  return (
+    <div>My App</div>  
+  )
+}
+
+export default App
+```
+
+This is my first MDX post with NextJS

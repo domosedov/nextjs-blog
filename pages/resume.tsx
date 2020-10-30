@@ -1,9 +1,9 @@
-import Container from "../components/Layout/Container";
-import Layout from "../components/Layout/Layout";
+import Container from "@/components/Layout/Container";
+import Image from "next/image";
 
 const Resume = () => {
   return (
-    <Layout title="Резюме">
+    <>
       <div className="py-4">
         <div className="flex items-center justify-center">
           <h1 className="text-4xl border-b-4 text-gray-800 border-indigo-500 tracking-tight leading-6 font-medium">
@@ -20,11 +20,13 @@ const Resume = () => {
             >
               <div className="flex flex-col space-y-2 items-center justify-center">
                 <div className="w-32 h-32 rounded-full overflow-hidden shadow-lg">
-                  <img
-                    className="w-full h-full object-cover"
-                    loading="lazy"
+                  <Image
+                    priority
+                    width={300}
+                    height={300}
+                    className="object-cover"
                     src="/images/avatar.jpg"
-                    alt=""
+                    alt="Avatar"
                   />
                 </div>
                 <div className="text-center">
@@ -113,7 +115,7 @@ const Resume = () => {
           </div>
         </div>
       </Container>
-    </Layout>
+    </>
   );
 };
 
