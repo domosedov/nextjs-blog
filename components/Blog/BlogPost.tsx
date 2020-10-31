@@ -8,7 +8,7 @@ type Props = {
   };
 };
 
-const PostLayout = ({ children, meta: { title, readTime } }: Props) => {
+const BlogPost = ({ children, meta: { title, readTime } }: Props) => {
   return (
     <div className="mx-auto container bg-green-200 p-4">
       <p>{title}</p>
@@ -18,4 +18,4 @@ const PostLayout = ({ children, meta: { title, readTime } }: Props) => {
   );
 };
 
-export default PostLayout;
+export default BlogPost;
