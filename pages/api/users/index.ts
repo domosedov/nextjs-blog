@@ -5,7 +5,7 @@ const prisma = new PrismaClient();
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "GET") {
-    const allUsers = await prisma.users.findMany({
+    const allUsers = await prisma.user.findMany({
       select: {
         id: true,
         login: true,

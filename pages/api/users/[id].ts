@@ -6,17 +6,18 @@ const prisma = new PrismaClient();
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "GET") {
     const { id } = req.query;
-    const user = await prisma.users.findOne({
+    const user = await prisma.user.findOne({
       where: {
         id: Number(id),
       },
       select: {
         login: true,
         email: true,
-        todos: {
+        todo: {
           select: {
             id: true,
             title: true,
+            description: true,
             completed: true,
           },
         },
