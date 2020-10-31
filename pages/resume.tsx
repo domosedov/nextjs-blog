@@ -1,9 +1,14 @@
 import Container from "@/components/Layout/Container";
+import { NextSeo } from "next-seo";
 import Image from "next/image";
 
 const Resume = () => {
   return (
     <>
+      <NextSeo
+        title="Резюме"
+        description="На этой странице вы можете ознакомится с моим резюме"
+      />
       <div className="py-4">
         <div className="flex items-center justify-center">
           <h1 className="text-4xl border-b-4 text-gray-800 border-indigo-500 tracking-tight leading-6 font-medium">

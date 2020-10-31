@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 import Main from "./Main";
@@ -90,7 +90,6 @@ const Layout = ({ children }: Props) => {
         <meta name="theme-color" content="#ffffff" />
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Domosedov DEV</title>
       </Head>
       <div className="min-h-screen flex flex-col">
         <Header />
