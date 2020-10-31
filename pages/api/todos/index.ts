@@ -5,7 +5,7 @@ const prisma = new PrismaClient()
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
     if (req.method === 'GET') {
-        const allTodos = await prisma.todos.findMany()
+        const allTodos = await prisma.todo.findMany()
         res.json(allTodos)
     }
 }
