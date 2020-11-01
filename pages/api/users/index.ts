@@ -28,13 +28,19 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     res.json(allUsers);
   } else if (req.method === 'POST') {
     try {
-      const result = await registerSchema.validateAsync(req.body)
-      res.json(result)
+      const {email, login, password} = await registerSchema.validateAsync(req.body)
+      const hashPassword = await hash(password, 10)
+      const newUser = await prisma.user.create({
+        data: {
+          email,
+          login,
+          password: hashPassword 
+        }
+      })
+      res.json(newUser)
     } catch (err) {
       res.status(400).json({message: err.message})
     }
-    
-
   } else {
     res.status(405).json({message: `Method ${req.method} is not allowed`});
   }
