@@ -4,6 +4,7 @@ import Module from "module";
 type PostMeta = {
   title: string;
   readTime: number;
+  tags?: string[];
 };
 
 type PostProps = {
@@ -22,13 +23,14 @@ const Post = ({
   },
 }: PostProps) => {
   return (
-    <div>
-      hello
-      <h2>{meta.title}</h2>
+    <li className="p-4 bg-white rounded-lg shadow-md">
+      <h2 className="text-xl mb-2">{meta.title}</h2>
       <Link href={"/blog" + link}>
-        <a>Read more</a>
+        <a className="px-4 py-2 bg-indigo-700 text-white rounded">
+          Читать далее
+        </a>
       </Link>
-    </div>
+    </li>
   );
 };
 
