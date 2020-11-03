@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import "prism-themes/themes/prism-dracula.css";
 
 type Props = {
   children: ReactNode;
@@ -10,10 +11,10 @@ type Props = {
 
 const BlogPost = ({ children, meta: { title, readTime } }: Props) => {
   return (
-    <div className="mx-auto container bg-green-200 p-4">
+    <div className="mx-auto container p-4">
       <p>{title}</p>
       <p>Read time: {readTime}</p>
-      <article>{children}</article>
+      <article className="prose prose-lg mx-auto">{children}</article>
     </div>
   );
 };

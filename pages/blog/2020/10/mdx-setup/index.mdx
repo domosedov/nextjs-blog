@@ -9,6 +9,14 @@ export default ({children}) => <BlogPost meta={meta}>{children}</BlogPost>
 
 # Hello, MDX
 
+> Another Hello World tutorial
+
+## Second
+
+![user](/images/avatar.jpg)
+
+When using Next.js with MDX through @next/mdx changing the MDX contents will now leverage Fast Refresh, making sure the browser does not have to reload the page on edits.
+
 ```js
 import React from 'react'
 
@@ -19,6 +27,24 @@ const App = () => {
 }
 
 export default App
+```
+
+Or you can use TypeScript
+
+```ts
+import * as React from 'react'
+
+const App: React.FC<{}> = () => {
+  return (
+    <div>My App</div>
+  )
+}
+
+export default App;
+```
+
+```php
+var_dump($_GET)
 ```
 
 This is my first MDX post with NextJS

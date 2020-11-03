@@ -8,9 +8,11 @@
     "start": "next start"
   },
   "dependencies": {
+    "@mapbox/rehype-prism": "^0.5.0",
     "@mdx-js/loader": "^1.6.19",
     "@next/mdx": "^10.0.0",
     "@prisma/client": "^2.10.1",
+    "@tailwindcss/typography": "^0.2.0",
     "bcrypt": "^5.0.0",
     "formidable": "^1.2.2",
     "formidable-serverless": "^1.0.3",
@@ -20,6 +22,7 @@
     "jsonwebtoken": "^8.5.1",
     "next": "^10.0.0",
     "next-seo": "^4.14.1",
+    "prism-themes": "^1.5.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-spring": "^8.0.27",
