@@ -20,11 +20,6 @@ const Navbar = () => {
                   <a>Todo App</a>
                 </Link>
               </li>
-              <li>
-                <Link href="/demo/file-upload">
-                  <a>File Upload</a>
-                </Link>
-              </li>
             </ul>
           </DropdownMenu>
         </li>
