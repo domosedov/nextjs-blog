@@ -3,7 +3,7 @@ import { useFormik } from "formik";
 import { ChangeEvent } from "react";
 import * as Yup from "yup";
 
-const FileUploadPage = (_props: any) => {
+const FileUploadPage = () => {
   const formik = useFormik({
     initialValues: {
       avatar: null,
@@ -17,12 +17,12 @@ const FileUploadPage = (_props: any) => {
           return value && value.size <= 5000000;
         })
         .test("ext", "Неверное расширение", (value) => {
-          const ACCEPTED_TYPES: string[] = ["image/jpeg", "image/png"];
+          // const ACCEPTED_TYPES: string[] = ["image/jpeg", "image/png"];
           return value && value.type === "image/jpeg";
         })
         .nullable(),
     }),
-    onSubmit: async (values) => {
+    onSubmit: async (values, { resetForm }) => {
       const formData = new FormData();
       formData.append("login", values.login);
       if (values.avatar) {
@@ -33,6 +33,11 @@ const FileUploadPage = (_props: any) => {
         method: "POST",
         body: formData,
       });
+
+      const result = await response.json();
+      console.log(result);
+
+      resetForm();
     },
   });
 
