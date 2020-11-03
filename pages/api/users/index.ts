@@ -39,6 +39,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       })
       res.json(newUser)
     } catch (err) {
+      console.error(err)
       res.status(400).json({message: err.message})
     }
   } else {
