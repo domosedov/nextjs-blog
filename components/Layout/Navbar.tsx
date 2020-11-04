@@ -1,4 +1,5 @@
 import Link from "next/link";
+import DropdownMenu from "./DropdownMenu";
 
 const Navbar = () => {
   return (
@@ -12,11 +13,15 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link href="/demo">
-            <a className="px-2 py-1 text-gray-700 rounded-md duration-150 hover:text-indigo-600 hover:underline focus:outline-none focus:shadow-outline">
-              Демо
-            </a>
-          </Link>
+          <DropdownMenu buttonText="Примеры">
+            <ul>
+              <li>
+                <Link href="/demo/todo-app">
+                  <a>Todo App</a>
+                </Link>
+              </li>
+            </ul>
+          </DropdownMenu>
         </li>
         <li>
           <Link href="/resume">

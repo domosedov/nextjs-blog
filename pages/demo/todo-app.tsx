@@ -34,7 +34,7 @@ const editTodoDescription = produce(
   }
 );
 
-const TodoApp = () => {
+const TodoApp = (_props: any) => {
   const [todos, setTodos] = useImmer<TodoType[]>([]);
   const formik = useFormik({
     initialValues: {
