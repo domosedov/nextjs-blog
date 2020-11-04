@@ -1,0 +1,27 @@
+import BlogPost from '@/components/Blog/BlogPost.tsx'
+
+export const meta = {
+    title: 'I learn TypeScript',
+    readTime: 5,
+    tags: ['typescript']
+}
+
+export default ({children}) => <BlogPost meta={meta}>{children}</BlogPost>
+
+# I Learn TypeScript
+
+Мои первые функции, типизированные с помощью TypeScript :)
+
+```ts
+function getPropertyValue<T, K extends keyof T>(item: T, key: K): T[K] {
+  return item[key];
+}
+
+function getItemBy<T, K extends keyof T>(
+  items: T[],
+  key: K,
+  value: T[K]
+): T | undefined {
+  return items.find((item: T) => item[key] === value);
+}
+```
