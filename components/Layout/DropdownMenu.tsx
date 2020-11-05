@@ -14,6 +14,9 @@ const DropdownMenu = ({
     from: { opacity: 0, transform: "translateY(-25%)" },
     enter: { opacity: 1, transform: "translateY(0%)" },
     leave: { opacity: 0, transform: "translateY(-25%)" },
+    config: {
+      duration: 150,
+    },
   });
 
   const buttonRef = useRef<HTMLButtonElement>(null);

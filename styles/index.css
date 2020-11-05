@@ -3,10 +3,177 @@
 @tailwind utilities;
 
 @layer base {
-  
+  .article {
+    @apply max-w-3xl mx-auto bg-white p-4 shadow-md rounded-lg my-2;
+  }
+
+  .article > h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-indigo-700 font-bold break-words;
+  }
+
+  .article > h1 {
+    @apply text-4xl mb-4;
+  }
+
+  .article > h2 {
+    @apply text-3xl mb-3;
+  }
+
+  .article > h3 {
+    @apply text-2xl mb-2;
+  }
+
+  .article > h4 {
+    @apply text-xl mb-1;
+  }
+
+  .article > h5 {
+    @apply text-lg mb-1;
+  }
+
+  .article > h6 {
+    @apply text-base mb-1;
+  }
+
+  .article > p {
+    @apply text-gray-800 my-2;
+  }
+
+  .article > blockquote > p {
+    @apply text-gray-700 border-l-8 border-indigo-700 pl-4 font-light italic my-2;
+  }
+
+  .article > p > a {
+    @apply text-indigo-600;
+  }
+
+  .article > p > a:hover {
+    @apply duration-200 text-indigo-800 underline;
+  }
+
+  .article > p > strong {
+    @apply font-semibold;
+  }
+
+  .article > p > em {
+    @apply italic;
+  }
+
+  .article > p > del {
+    @apply line-through;
+  }
+
+  .article > p > code {
+    @apply inline-block bg-gray-900 px-2 rounded font-mono text-indigo-400;
+  }
+
+  .article > p > img {
+    @apply block w-full;
+  }
+
+  .article > p > sup {
+    @apply text-indigo-700;
+  }
+
+  .article > ul, ol {
+    @apply my-2;
+  }
+
+  .article > ul > li {
+    @apply list-disc list-inside text-gray-800;
+  }
+
+  .article > ol > li {
+    @apply list-decimal list-inside text-gray-800;
+  }
+
+  .article > ul.contains-task-list > li {
+    @apply list-none;
+  }
+
+  .article > table {
+    @apply block table-auto border-collapse border-2 border-indigo-200 overflow-auto;
+  }  
+
+  .article > table > thead > tr > th {
+    @apply border px-4 py-2 text-gray-900;
+  }
+
+  .article > table > tbody > tr > td {
+    @apply border px-4 py-2 text-gray-800;
+  }
+
+  .article > .footnotes > ol {
+    @apply text-sm text-gray-800;
+  }
+
+  .article > .footnotes > ol > li {
+    @apply list-decimal list-inside;
+  }
+
+  .article hr {
+    @apply border-indigo-200 my-1;
+  }
+
+  @screen md {
+    .article {
+        @apply p-8 shadow-md my-4;
+      }
+
+    .article > h1 {
+      @apply text-6xl mb-6;
+    }
+
+    .article > h2 {
+      @apply text-5xl mb-5;
+    }
+
+    .article > h3 {
+      @apply text-4xl mb-4;
+    }
+
+    .article > h4 {
+      @apply text-3xl mb-3;
+    }
+
+    .article > h5 {
+      @apply text-2xl mb-2;
+    }
+
+    .article > h6 {
+      @apply text-xl mb-1;
+    }
+
+    .article > p {
+    @apply text-lg my-4;
+    }
+
+    .article > blockquote {
+    @apply text-lg my-4;
+    }
+
+    .article > table {
+      @apply text-lg;
+    }
+
+    .article > ul, ol {
+      @apply text-lg;
+    }
+
+    .article > .footnotes > ol {
+    @apply text-base text-gray-800;
+    }
+
+  }
+
   body {
     @apply bg-gray-200;
-  }  
+  }
 
   @keyframes logo-spin {
     from {

@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 
 const Header = () => {
   return (
-    <header className="bg-white px-4 py-2 sticky top-0 shadow-xs">
+    <header className="bg-white px-4 py-2 sticky top-0 shadow-xs z-50">
       <div className="flex items-center justify-between">
         <div className="w-12 h-12 transform duration-100 hover:scale-105">
           <Link href="/">
