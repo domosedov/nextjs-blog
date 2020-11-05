@@ -112,7 +112,7 @@
     @apply text-sm text-gray-800;
   }
 
-  .article > .footnotes > ol > li {
+  .article > .footnotes ol > li {
     @apply list-decimal list-inside;
   }
 
