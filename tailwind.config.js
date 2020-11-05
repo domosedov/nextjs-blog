@@ -8,6 +8,9 @@ module.exports = {
       "./components/**/*.{js,ts,jsx,tsx}",
       "./pages/**/*.{js,ts,jsx,tsx}",
     ],
+     options: {
+      whitelist: ['footnotes'],
+    }
   },
   theme: {
     extend: {},
