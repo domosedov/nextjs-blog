@@ -3,10 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-  .article {
-    @apply max-w-3xl mx-auto bg-white p-4 shadow-md rounded-lg my-2;
-  }
-
+  
   .article > h1,
   h2,
   h3,
@@ -116,10 +113,7 @@
     @apply border-indigo-200 my-1;
   }
 
-  @screen md {
-    .article {
-        @apply p-8 shadow-md my-4;
-      }
+  @screen md {    
 
     .article > h1 {
       @apply text-6xl mb-5;

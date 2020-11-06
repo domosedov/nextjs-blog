@@ -8,14 +8,10 @@
     "start": "next start"
   },
   "dependencies": {
-    "@mapbox/rehype-prism": "^0.5.0",
     "@mdx-js/loader": "^1.6.19",
     "@next/mdx": "^10.0.0",
     "@prisma/client": "^2.10.1",
-    "@tailwindcss/typography": "^0.2.0",
     "bcrypt": "^5.0.0",
-    "formidable": "^1.2.2",
-    "formidable-serverless": "^1.0.3",
     "formik": "^2.2.1",
     "immer": "^7.0.14",
     "joi": "^17.3.0",
@@ -31,9 +27,9 @@
     "yup": "^0.29.3"
   },
   "devDependencies": {
+    "@mapbox/rehype-prism": "^0.5.0",
     "@prisma/cli": "^2.10.1",
     "@types/bcrypt": "^3.0.0",
-    "@types/formidable": "^1.0.31",
     "@types/jsonwebtoken": "^8.5.0",
     "@types/node": "^14.14.2",
     "@types/react": "^16.9.55",
@@ -41,7 +37,8 @@
     "@types/uuid": "^8.3.0",
     "@types/webpack-env": "^1.15.3",
     "@types/yup": "^0.29.8",
-    "tailwindcss": "^1.9.5",
+    "rehype-accessible-emojis": "^0.3.2",
+    "tailwindcss": "^1.9.6",
     "typescript": "^4.0.3"
   }
 }
