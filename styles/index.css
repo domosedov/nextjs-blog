@@ -3,41 +3,38 @@
 @tailwind utilities;
 
 @layer base {
-  .article {
-    @apply max-w-3xl mx-auto bg-white p-4 shadow-md rounded-lg my-2;
-  }
-
+  
   .article > h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    @apply text-indigo-700 font-bold break-words;
+    @apply text-gray-900 font-bold break-words;
   }
 
   .article > h1 {
-    @apply text-4xl mb-4;
+    @apply text-4xl mt-2 mb-4;
   }
 
   .article > h2 {
-    @apply text-3xl mb-3;
+    @apply text-3xl mt-2 mb-3;
   }
 
   .article > h3 {
-    @apply text-2xl mb-2;
+    @apply text-2xl mt-2 mb-2;
   }
 
   .article > h4 {
-    @apply text-xl mb-1;
+    @apply text-xl mt-1 mb-1;
   }
 
   .article > h5 {
-    @apply text-lg mb-1;
+    @apply text-lg mt-1 mb-1;
   }
 
   .article > h6 {
-    @apply text-base mb-1;
+    @apply text-base mt-1 mb-1;
   }
 
   .article > p {
@@ -45,11 +42,11 @@
   }
 
   .article > blockquote > p {
-    @apply text-gray-700 border-l-8 border-indigo-700 pl-4 font-light italic my-2;
+    @apply text-gray-900 border-l-4 border-indigo-700 pl-4 font-medium italic my-2;
   }
 
   .article > p > a {
-    @apply text-indigo-600;
+    @apply text-indigo-700;
   }
 
   .article > p > a:hover {
@@ -57,7 +54,7 @@
   }
 
   .article > p > strong {
-    @apply font-semibold;
+    @apply font-semibold text-gray-900;
   }
 
   .article > p > em {
@@ -81,7 +78,7 @@
   }
 
   .article > ul, ol {
-    @apply my-2;
+    @apply mb-2;
   }
 
   .article > ul > li {
@@ -106,43 +103,36 @@
 
   .article > table > tbody > tr > td {
     @apply border px-4 py-2 text-gray-800;
-  }
-
-  .article > .footnotes > ol {
-    @apply text-sm text-gray-800;
-  }
+  }  
 
   .article > .footnotes > ol > li {
-    @apply list-decimal list-inside;
+    @apply list-decimal list-inside text-xs text-gray-800;
   }
 
   .article hr {
     @apply border-indigo-200 my-1;
   }
 
-  @screen md {
-    .article {
-        @apply p-8 shadow-md my-4;
-      }
+  @screen md {    
 
     .article > h1 {
-      @apply text-6xl mb-6;
+      @apply text-6xl mb-5;
     }
 
     .article > h2 {
-      @apply text-5xl mb-5;
+      @apply text-5xl mb-4;
     }
 
     .article > h3 {
-      @apply text-4xl mb-4;
+      @apply text-4xl mb-3;
     }
 
     .article > h4 {
-      @apply text-3xl mb-3;
+      @apply text-3xl mb-2;
     }
 
     .article > h5 {
-      @apply text-2xl mb-2;
+      @apply text-2xl mb-1;
     }
 
     .article > h6 {
@@ -165,14 +155,14 @@
       @apply text-lg;
     }
 
-    .article > .footnotes > ol {
-    @apply text-base text-gray-800;
+    .article > .footnotes > ol > li {
+    @apply text-sm;
     }
 
   }
 
   body {
-    @apply bg-gray-200;
+    @apply bg-gray-200 dark:bg-black;
   }
 
   @keyframes logo-spin {

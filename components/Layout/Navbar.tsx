@@ -1,5 +1,7 @@
 import Link from "next/link";
+import { useEffect, useReducer } from "react";
 import DropdownMenu from "./DropdownMenu";
+import ThemeToggleButton from "./ThemeToggleButton";
 
 const Navbar = () => {
   return (
@@ -29,6 +31,9 @@ const Navbar = () => {
               Резюме
             </a>
           </Link>
+        </li>
+        <li>
+          <ThemeToggleButton />
         </li>
       </ul>
     </nav>

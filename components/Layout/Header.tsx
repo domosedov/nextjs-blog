@@ -9,7 +9,7 @@ const Header = () => {
         <div className="w-12 h-12 transform duration-100 hover:scale-105">
           <Link href="/">
             <a
-              className="block transform focus:scale-105 focus:outline-none"
+              className="block transform focus:scale-105 focus:outline-none focus:ring-4"
               title="Перейти на главную"
             >
               <img

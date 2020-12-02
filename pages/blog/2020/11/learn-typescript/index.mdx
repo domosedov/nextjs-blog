@@ -1,12 +1,14 @@
-import BlogPost from '@/components/Blog/BlogPost.tsx'
+import Article from '@/components/Article/Article'
 
 export const meta = {
     title: 'I learn TypeScript',
+    tags: ['typescript'],
+    author: 'Aleksandr Grigorii',
     readTime: 5,
-    tags: ['typescript']
+    date: new Date('2020-11-06')
 }
 
-export default ({children}) => <BlogPost meta={meta}>{children}</BlogPost>
+export default ({children}) => <Article meta={meta}>{children}</Article>
 
 # I Learn TypeScript
 

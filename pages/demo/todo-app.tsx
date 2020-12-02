@@ -82,6 +82,9 @@ const TodoApp = (_props: any) => {
       <h1 className="text-6xl text-center font-semibold text-gray-900">
         TodoApp
       </h1>
+      <div className="text-xl md:text-6xl bg-yellow-200 p-4 text-center rounded-lg shadow-lg m-4">
+        В процессе разработки.
+      </div>
       <div className="flex space-x-4">
         <div className="p-4 rounded-lg shadow-lg bg-white w-1/5">
           <form onSubmit={formik.handleSubmit}>
