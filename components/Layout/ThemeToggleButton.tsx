@@ -10,21 +10,15 @@ const ThemeToggleButton = () => {
   };
 
   useEffect(() => {
-    if (theme) {
-      localStorage.setItem("theme", "dark");
-    } else {
-      localStorage.removeItem("theme");
-    }
-  }, [theme]);
-
-  useEffect(() => {
     if (
       localStorage.theme === "dark" ||
       (!("theme" in localStorage) &&
         window.matchMedia("(prefers-color-scheme: dark)").matches)
     ) {
+      localStorage.setItem("theme", "dark");
       document.querySelector("html")!.classList.add("dark");
     } else {
+      localStorage.removeItem("theme");
       document.querySelector("html")!.classList.remove("dark");
     }
   }, [theme]);

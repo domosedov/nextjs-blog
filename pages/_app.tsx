@@ -2,7 +2,6 @@ import "../styles/index.css";
 import type { AppProps } from "next/app";
 import Layout from "../components/Layout/Layout";
 import { DefaultSeo } from "next-seo";
-import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
