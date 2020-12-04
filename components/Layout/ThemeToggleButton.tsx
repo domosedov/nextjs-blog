@@ -1,43 +1,26 @@
-import React, { useEffect, useReducer } from "react";
-import HeroIcon from "@/components/Layout/HeroIcon";
+import { MouseEvent } from "react";
+import { useDarkMode, useDarkModeToggle } from "pages/_app";
+import HeroIconSolid from "./HeroIconSolid";
 
 const ThemeToggleButton = () => {
-  const [theme, toggle] = useReducer((t) => !t, false);
+  const isDarkMode = useDarkMode();
+  const toggleTheme = useDarkModeToggle();
 
-  const handleSwitchTheme = (evt: React.MouseEvent<HTMLButtonElement>) => {
-    evt.preventDefault();
-    toggle();
+  const handleSwitchTheme = (evt: MouseEvent<HTMLButtonElement>) => {
+    toggleTheme!();
   };
 
-  useEffect(() => {
-    if (theme) {
-      localStorage.setItem("theme", "dark");
-    } else {
-      localStorage.removeItem("theme");
-    }
-  }, [theme]);
-
-  useEffect(() => {
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      document.querySelector("html")!.classList.add("dark");
-    } else {
-      document.querySelector("html")!.classList.remove("dark");
-    }
-  }, [theme]);
   return (
     <button
       onClick={handleSwitchTheme}
       type="button"
-      className="px-2 py-1 text-gray-700 rounded-md duration-150 hover:text-indigo-600 hover:underline focus:outline-none focus:shadow-outline"
+      className="px-2 py-1 text-gray-700 rounded-full duration-150 hover:text-indigo-600 hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-transparent focus:ring-indigo-200"
     >
-      <HeroIcon
-        name={theme ? "sun" : "moon"}
-        className="w-6 h-6"
-        strokeWidth={2}
+      <HeroIconSolid
+        name={isDarkMode ? "sun" : "moon"}
+        className={`${
+          isDarkMode ? "text-yellow-500" : "text-indigo-700"
+        } w-8 h-8`}
       />
     </button>
   );

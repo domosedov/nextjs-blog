@@ -6,10 +6,10 @@ import ThemeToggleButton from "./ThemeToggleButton";
 const Navbar = () => {
   return (
     <nav>
-      <ul className="flex items-center text-white divide-x">
+      <ul className="flex items-center text-black dark:text-white">
         <li>
           <Link href="/blog">
-            <a className="px-2 py-1 text-gray-700 rounded-md duration-150 hover:text-indigo-600 hover:underline focus:outline-none focus:shadow-outline">
+            <a className="px-2 py-1 rounded-md duration-150 hover:text-indigo-600 hover:underline my-focus">
               Блог
             </a>
           </Link>
@@ -27,7 +27,7 @@ const Navbar = () => {
         </li>
         <li>
           <Link href="/resume">
-            <a className="px-2 py-1 text-gray-700 rounded-md duration-150 hover:text-indigo-600 hover:underline focus:outline-none focus:shadow-outline">
+            <a className="px-2 py-1 rounded-md duration-150 hover:text-indigo-600 hover:underline my-focus">
               Резюме
             </a>
           </Link>
