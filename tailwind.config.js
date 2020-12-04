@@ -7,19 +7,26 @@ module.exports = {
       "./pages/**/*.{js,ts,jsx,tsx}",
     ],
     options: {
-      whitelist: ['footnotes'],
-    }
+      whitelist: ["footnotes"],
+    },
   },
-  darkMode: 'class', // or 'media' or 'class'
+  darkMode: "class", // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
-        lime: colors.lime
-      }
+        lime: colors.lime,
+      },
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      ringWidth: ["focus-visible"],
+      ringColor: ["focus-visible"],
+      ringOpacity: ["focus-visible"],
+      ringOffsetWidth: ["focus-visible"],
+      ringOffsetColor: ["focus-visible"],
+      outline: ["focus-visible"],
+    },
   },
   plugins: [],
-}
+};

@@ -10,6 +10,7 @@ import type { AppProps } from "next/app";
 import { DefaultSeo } from "next-seo";
 import { parseCookies, setCookie } from "nookies";
 import "../styles/index.css";
+import "focus-visible";
 
 import Layout from "../components/Layout/Layout";
 

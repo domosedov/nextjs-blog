@@ -3,7 +3,12 @@ import Button from '@/components/mdx/Button';
 
 export const meta = {
     title: 'Резюме',
-    author: 'Aleksandr Grigorii',
+    author: {
+        name: 'Александр Григорий',
+        avatar: '/images/avatar.jpg',
+        link: 'https://github.com/domosedov',
+        about: 'web-разработчик'
+    },
     readTime: 10,
     date: new Date('2020-11-06')
 }
@@ -18,7 +23,7 @@ export default ({children}) => <Article meta={meta}>{children}</Article>
 
 > "Умный дверной замок #Xiaomi с широкоугольной камерой поступает в продажу"
 
-# Заголовок Жопа 1
+# Заголовок 1
 ## Заголовок 2
 ### Заголовок 3
 #### Заголовок 4

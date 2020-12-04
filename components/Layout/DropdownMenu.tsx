@@ -29,7 +29,7 @@ const DropdownMenu = ({
       <button
         ref={buttonRef}
         onClick={() => setIsOpen(!isOpen)}
-        className="px-2 py-1 text-gray-700 rounded-md duration-150 hover:text-indigo-600 hover:underline focus:outline-none focus:shadow-outline"
+        className="px-2 py-1 text-black dark:text-white rounded-md duration-150 hover:text-indigo-600 hover:underline my-focus"
       >
         {buttonText}
       </button>
