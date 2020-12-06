@@ -5,7 +5,6 @@ import { posts } from "../../lib/getAllPosts";
 import Container from "@/components/Layout/Container";
 
 const BlogPage = () => {
-  console.log(posts);
   return (
     <>
       <NextSeo title="Блог" description="Список статей" />
