@@ -1,4 +1,5 @@
 import { useMenuClickOutside } from "lib/hooks/use-menu-click-outside";
+import Link from "next/link";
 import { memo, ReactNode, useRef, useState } from "react";
 import { useTransition, animated } from "react-spring";
 import HeroIcon from "./HeroIcon";
@@ -35,15 +36,33 @@ const NavbarMobile = () => {
                 ref={menuRef}
                 style={props}
                 key={key}
-                className="p-4 absolute top-auto w-64 right-0 bg-gray-50 dark:bg-gray-900 rounded border border-indigo-100 dark:border-indigo-900"
+                className="p-4 absolute top-auto w-48 right-0 bg-gray-50 dark:bg-gray-900 rounded border border-indigo-100 dark:border-indigo-900"
               >
-                <p className="text-black dark:text-white">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Cupiditate fugit, pariatur repellat reprehenderit perspiciatis
-                  nihil, minus odio quisquam voluptatibus, quae accusamus. Modi
-                  temporibus molestias consequatur suscipit vitae velit nobis
-                  voluptates.
-                </p>
+                <nav>
+                  <ul className="flex flex-col items-center text-black dark:text-white">
+                    <li>
+                      <Link href="/blog">
+                        <a className="px-2 py-1 rounded-md hover:text-indigo-600 dark:hover:text-indigo-300 theme-focus">
+                          Блог
+                        </a>
+                      </Link>
+                    </li>
+                    {/* <li>
+                      <Link href="/demo">
+                        <a className="px-2 py-1 rounded-md hover:text-indigo-600 dark:hover:text-indigo-300 theme-focus">
+                          Примеры
+                        </a>
+                      </Link>
+                    </li> */}
+                    <li>
+                      <Link href="/resume">
+                        <a className="px-2 py-1 rounded-md hover:text-indigo-600 dark:hover:text-indigo-300 theme-focus">
+                          Резюме
+                        </a>
+                      </Link>
+                    </li>
+                  </ul>
+                </nav>
               </animated.div>
             )
         )}

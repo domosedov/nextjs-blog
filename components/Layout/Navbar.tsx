@@ -1,6 +1,4 @@
 import Link from "next/link";
-import DropdownMenu from "./DropdownMenu";
-import ThemeToggleButton from "./ThemeToggleButton";
 
 const Navbar = () => {
   return (
@@ -13,17 +11,13 @@ const Navbar = () => {
             </a>
           </Link>
         </li>
-        <li>
-          <DropdownMenu buttonText="Примеры">
-            <ul>
-              <li>
-                <Link href="/demo/todo-app">
-                  <a>Todo App</a>
-                </Link>
-              </li>
-            </ul>
-          </DropdownMenu>
-        </li>
+        {/* <li>
+          <Link href="/demo">
+            <a className="px-2 py-1 rounded-md hover:text-indigo-600 dark:hover:text-indigo-300 theme-focus">
+              Примеры
+            </a>
+          </Link>
+        </li> */}
         <li>
           <Link href="/resume">
             <a className="px-2 py-1 rounded-md hover:text-indigo-600 dark:hover:text-indigo-300 theme-focus">
