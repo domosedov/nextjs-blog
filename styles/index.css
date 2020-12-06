@@ -128,7 +128,7 @@
 }
 
 @layer components {
-  .my-focus {
+  .theme-focus {
     @apply outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent focus-visible:ring-indigo-200;
   }
 }
