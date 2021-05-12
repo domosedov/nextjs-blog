@@ -40,7 +40,7 @@
     "@types/webpack-env": "^1.15.3",
     "@types/yup": "^0.29.8",
     "autoprefixer": "^10.0.2",
-    "postcss": "^8.1.7",
+    "postcss": "^8.2.10",
     "postcss-focus-visible": "^5.0.0",
     "rehype-accessible-emojis": "^0.3.2",
     "tailwindcss": "^2.0.1",
