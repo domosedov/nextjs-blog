@@ -14,7 +14,7 @@
     "bcrypt": "^5.0.0",
     "focus-visible": "^5.2.0",
     "formik": "^2.2.1",
-    "immer": "^8.0.0",
+    "immer": "^9.0.6",
     "joi": "^17.3.0",
     "jsonwebtoken": "^8.5.1",
     "next": "^10.0.1",
